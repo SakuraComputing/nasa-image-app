@@ -25,12 +25,13 @@ describe('meida action object', () => {
 
     it('should get media from the api', async () => {
         // Given 
-        mockAxios.onGet('/api/uploads/all').reply(200, {
+        const searchString = 'Apollo';
+        mockAxios.onGet(`https://images-api.nasa.gov/search?q=${searchString}&media_type=image`).reply(200, {
             test: 'API Media'
         });
     
         // When
-        getMedia()(store.dispatch);
+        getMedia(searchString)(store.dispatch);
         await flushAllPromises();
     
         // Then
