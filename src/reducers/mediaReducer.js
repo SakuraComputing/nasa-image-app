@@ -1,4 +1,4 @@
-import { SET_MEDIA } from '../actions/types';
+import { SET_MEDIA, GET_MEDIA } from '../actions/types';
 
 const defaultMediaReducerState = [];
 
@@ -6,6 +6,11 @@ export default (state = defaultMediaReducerState, action) => {
     switch (action.type) {
         case SET_MEDIA:
             return action.media;
+        case GET_MEDIA:
+            return {
+                ...state,
+                media: action.payload
+            }
         default:
             return state;
     }

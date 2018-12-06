@@ -3,8 +3,19 @@ import { shallow } from 'enzyme';
 import LandingPage from '../../components/LandingPage';
 
 describe('LandingPage', () => {
+
+    let landingPage;
+    
+    beforeEach(() => {
+        landingPage = shallow((<LandingPage />));
+    })
     it('should render correctly', () => {
-        const wrapper = shallow((<LandingPage />));
-        expect(wrapper).toMatchSnapshot();
+        expect(landingPage).toMatchSnapshot();
+    });
+    it('should set the initial `state`', () => {
+        expect(landingPage.state()).toEqual({
+            media: [],
+            searchString: ''
+        })
     });
 });
