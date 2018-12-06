@@ -1,26 +1,16 @@
-import { setTextFilter, setMediaByImage, setMediaByAudio } from '../actions/filter';
-import { SET_TEXT_FILTER, SET_MEDIA_BY_AUDIO, SET_MEDIA_BY_IMAGE} from '../actions/types';
+import { SET_TEXT_FILTER, SET_MEDIA_BY_IMAGE, SET_MEDIA_BY_AUDIO } from './types';
 
-describe('Filter action object', () => {
-    it('should set up the text filter object', () => {
-        const action = setTextFilter('moon');
-        expect(action).toEqual({
-            type: SET_TEXT_FILTER,
-            text: 'moon'
-        })
-    });
-    it('should set the set by audio object', () => {
-        const action = setMediaByAudio('audio')
-        expect(action).toEqual({
-            type: SET_MEDIA_BY_AUDIO,
-            audio: 'audio'
-        });
-    });
-    it('should set the set by immage object', () => {
-        const action = setMediaByImage('image');
-        expect(action).toEqual({
-            type: SET_MEDIA_BY_IMAGE,
-            image: 'image'
-        })
-    });
+export const setTextFilter = (text = '') => ({
+    type: SET_TEXT_FILTER,
+    text
+});
+
+export const setMediaByAudio = ( audio = '') => ({
+    type: SET_MEDIA_BY_AUDIO,
+    audio
+});
+
+export const setMediaByImage = ( image = '') => ({
+    type: SET_MEDIA_BY_IMAGE,
+    image
 });
