@@ -1,5 +1,5 @@
 import filtersReducer from '../../reducers/filtersReducer';
-import { SET_TEXT_FILTER, SET_MEDIA_BY_IMAGE, SET_MEDIA_BY_AUDIO } from '../actions/types';
+import { SET_TEXT_FILTER, SET_MEDIA_BY_IMAGE, SET_MEDIA_BY_AUDIO } from '../../actions/types';
 
 
 describe('filters reducer', () => {
@@ -8,7 +8,7 @@ describe('filters reducer', () => {
             type: SET_TEXT_FILTER,
             text: 'audio'
         });
-        expect(state.text).toBe('test');
+        expect(state.text).toBe('audio');
     });
     it('should set the media for audio', () => {
         const state = filtersReducer(undefined, {
