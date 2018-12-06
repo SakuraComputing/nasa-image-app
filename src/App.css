@@ -1,4 +1,38 @@
+
+
 .App {
   text-align: center;
+}
+
+.container {
+  margin: 0 5%;
+}
+
+.filter-bar {
+  border: solid 2px purple;
+  margin-bottom: 20px;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.input-box {
+  padding: 10px;
+  border: solid 1px purple;
+  font-size: 100%;
+  border-radius: 10px;
+}
+
+.filter-header {
+  display: inline;
+}
+
+.facilities-group {
+  display: inline-block;
+  margin-left: 40px;
+  font-size: 115%;
 }
 
