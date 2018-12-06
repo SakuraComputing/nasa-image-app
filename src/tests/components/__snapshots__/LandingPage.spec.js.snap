@@ -5,6 +5,7 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <LandingPage
     getMedia={[MockFunction]}
+    media={[MockFunction]}
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -69,6 +70,9 @@ ShallowWrapper {
         >
           Search
         </button>
+        <div
+          className="image-container"
+        />
       </div>,
       "className": "filter-bar",
     },
@@ -126,6 +130,9 @@ ShallowWrapper {
           >
             Search
           </button>,
+          <div
+            className="image-container"
+          />,
         ],
         "className": "filter-header",
       },
@@ -278,6 +285,18 @@ ShallowWrapper {
           "rendered": "Search",
           "type": "button",
         },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": undefined,
+            "className": "image-container",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "div",
+        },
       ],
       "type": "div",
     },
@@ -339,6 +358,9 @@ ShallowWrapper {
           >
             Search
           </button>
+          <div
+            className="image-container"
+          />
         </div>,
         "className": "filter-bar",
       },
@@ -396,6 +418,9 @@ ShallowWrapper {
             >
               Search
             </button>,
+            <div
+              className="image-container"
+            />,
           ],
           "className": "filter-header",
         },
@@ -547,6 +572,18 @@ ShallowWrapper {
             "ref": null,
             "rendered": "Search",
             "type": "button",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": undefined,
+              "className": "image-container",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
           },
         ],
         "type": "div",

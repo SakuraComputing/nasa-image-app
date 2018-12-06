@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import MediaList from '../components/mediaList';
+import MediaList from '../../components/MediaList';
 import media from '../fixtures/media';
 
 describe('MediaList component', () => {

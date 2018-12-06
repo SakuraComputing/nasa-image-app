@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
 import { getMedia } from '../actions/media';
+import MediaList from './MediaList';
 
 export class LandingPage extends Component {
 
@@ -26,6 +27,16 @@ export class LandingPage extends Component {
     }
     
     render() {
+
+        let mediaResults;
+
+        if(this.props.media.media) {
+            const { items } = this.props.media.media.collection;
+            mediaResults = items.map((item, index) => 
+            (
+                <MediaList key={index} title={item.data[0].title} image={item.links[0].href} />
+            ))
+        }
 
         return (
             <div className="filter-bar">
@@ -57,6 +68,9 @@ export class LandingPage extends Component {
                         <label htmlFor="audio" className="">audio</label>
                     </div>
                     <button onClick={this.onSearch}>Search</button>
+                    <div className="image-container">
+                        {mediaResults}
+                    </div>
                 </div>
             </div>
         )

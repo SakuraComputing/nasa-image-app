@@ -1,6 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { LandingPage } from '../../components/LandingPage';
+import media from '../fixtures/media';
 
 describe('LandingPage', () => {
 
@@ -8,7 +9,8 @@ describe('LandingPage', () => {
     
     beforeEach(() => {
         const getMedia = jest.fn();
-        landingPage = shallow((<LandingPage getMedia={getMedia} />));
+        const items = jest.fn();
+        landingPage = shallow((<LandingPage getMedia={getMedia} media={items}/>));
     })
     it('should render correctly', () => {
         expect(landingPage).toMatchSnapshot();
