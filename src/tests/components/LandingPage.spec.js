@@ -1,13 +1,14 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import LandingPage from '../../components/LandingPage';
+import { LandingPage } from '../../components/LandingPage';
 
 describe('LandingPage', () => {
 
     let landingPage;
     
     beforeEach(() => {
-        landingPage = shallow((<LandingPage />));
+        const getMedia = jest.fn();
+        landingPage = shallow((<LandingPage getMedia={getMedia} />));
     })
     it('should render correctly', () => {
         expect(landingPage).toMatchSnapshot();
@@ -21,10 +22,10 @@ describe('LandingPage', () => {
     describe('when typing into the input box', () => {
         const searchString = 'challenger';
         it('should accept input', () => {
-            landingPage.find('.search-input').simulate('change',
+            landingPage.find('.input-box').simulate('change',
                 { target: { value: searchString }}
             )
-            expect(landingPage.state().searchText).toEqual(searchString);
+            expect(landingPage.state().searchString).toEqual(searchString);
         });
     });
 });

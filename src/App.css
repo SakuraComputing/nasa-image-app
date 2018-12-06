@@ -1,7 +1,14 @@
-
+* {
+  box-sizing: border-box;
+}
 
 .App {
   text-align: center;
+}
+
+body {
+  margin: 2% 5%;
+  color: #4c4c4c;
 }
 
 .container {
@@ -9,10 +16,14 @@
 }
 
 .filter-bar {
-  border: solid 2px purple;
+  border: solid 2px #f90;
   margin-bottom: 20px;
   padding: 30px;
   border-radius: 10px;
+}
+
+.search-bar {
+  
 }
 
 h1 {
@@ -21,18 +32,33 @@ h1 {
 
 .input-box {
   padding: 10px;
-  border: solid 1px purple;
+  border: solid 1px #f90;
   font-size: 100%;
   border-radius: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.input-box:focus {
+  outline: none;
 }
 
 .filter-header {
   display: inline;
 }
 
-.facilities-group {
-  display: inline-block;
-  margin-left: 40px;
+.select-group {
+  /* display: inline-block; */
+  /* margin-left: 40px; */
+  margin-top: 20px;
   font-size: 115%;
+text-align: center;
 }
+
+.select-checkbox {
+  margin-left: 25px;
+  width: 25px;
+}
+
 

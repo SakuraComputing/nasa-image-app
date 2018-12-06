@@ -3,7 +3,9 @@
 exports[`LandingPage should render correctly 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <LandingPage />,
+  Symbol(enzyme.__unrendered__): <LandingPage
+    getMedia={[MockFunction]}
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -17,85 +19,115 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": Array [
+      "children": <div
+        className="filter-header"
+      >
         <h1>
-          NASA Media Viewer
-        </h1>,
-        <label
-          htmlFor="search"
+          NASA Search
+        </h1>
+        <div
+          className="search-bar"
         >
-          Enter Search criteria
-        </label>,
-        <input
-          className="search-input"
-          name="search"
-          type="text"
-        />,
-      ],
+          <input
+            className="input-box"
+            name="search"
+            onChange={[Function]}
+            placeholder="Enter search text"
+            type="text"
+          />
+        </div>
+        <div
+          className="select-group"
+        >
+          <input
+            className="select-checkbox"
+            id="images"
+            type="checkbox"
+            value="images"
+          />
+          <label
+            className=""
+            htmlFor="images"
+          >
+            Images
+          </label>
+          <input
+            className="select-checkbox"
+            id="audio"
+            type="checkbox"
+            value="audio"
+          />
+          <label
+            className=""
+            htmlFor="audio"
+          >
+            audio
+          </label>
+        </div>
+        <button
+          onClick={[Function]}
+        >
+          Search
+        </button>
+      </div>,
+      "className": "filter-bar",
     },
     "ref": null,
-    "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "NASA Media Viewer",
-        },
-        "ref": null,
-        "rendered": "NASA Media Viewer",
-        "type": "h1",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "Enter Search criteria",
-          "htmlFor": "search",
-        },
-        "ref": null,
-        "rendered": "Enter Search criteria",
-        "type": "label",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "className": "search-input",
-          "name": "search",
-          "onChange": undefined,
-          "type": "text",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": "input",
-      },
-    ],
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
+    "rendered": Object {
       "instance": null,
       "key": undefined,
       "nodeType": "host",
       "props": Object {
         "children": Array [
           <h1>
-            NASA Media Viewer
+            NASA Search
           </h1>,
-          <label
-            htmlFor="search"
+          <div
+            className="search-bar"
           >
-            Enter Search criteria
-          </label>,
-          <input
-            className="search-input"
-            name="search"
-            type="text"
-          />,
+            <input
+              className="input-box"
+              name="search"
+              onChange={[Function]}
+              placeholder="Enter search text"
+              type="text"
+            />
+          </div>,
+          <div
+            className="select-group"
+          >
+            <input
+              className="select-checkbox"
+              id="images"
+              type="checkbox"
+              value="images"
+            />
+            <label
+              className=""
+              htmlFor="images"
+            >
+              Images
+            </label>
+            <input
+              className="select-checkbox"
+              id="audio"
+              type="checkbox"
+              value="audio"
+            />
+            <label
+              className=""
+              htmlFor="audio"
+            >
+              audio
+            </label>
+          </div>,
+          <button
+            onClick={[Function]}
+          >
+            Search
+          </button>,
         ],
+        "className": "filter-header",
       },
       "ref": null,
       "rendered": Array [
@@ -104,10 +136,10 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "NASA Media Viewer",
+            "children": "NASA Search",
           },
           "ref": null,
-          "rendered": "NASA Media Viewer",
+          "rendered": "NASA Search",
           "type": "h1",
         },
         Object {
@@ -115,28 +147,410 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "Enter Search criteria",
-            "htmlFor": "search",
+            "children": <input
+              className="input-box"
+              name="search"
+              onChange={[Function]}
+              placeholder="Enter search text"
+              type="text"
+            />,
+            "className": "search-bar",
           },
           "ref": null,
-          "rendered": "Enter Search criteria",
-          "type": "label",
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "input-box",
+              "name": "search",
+              "onChange": [Function],
+              "placeholder": "Enter search text",
+              "type": "text",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "input",
+          },
+          "type": "div",
         },
         Object {
           "instance": null,
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "className": "search-input",
-            "name": "search",
-            "onChange": undefined,
-            "type": "text",
+            "children": Array [
+              <input
+                className="select-checkbox"
+                id="images"
+                type="checkbox"
+                value="images"
+              />,
+              <label
+                className=""
+                htmlFor="images"
+              >
+                Images
+              </label>,
+              <input
+                className="select-checkbox"
+                id="audio"
+                type="checkbox"
+                value="audio"
+              />,
+              <label
+                className=""
+                htmlFor="audio"
+              >
+                audio
+              </label>,
+            ],
+            "className": "select-group",
           },
           "ref": null,
-          "rendered": null,
-          "type": "input",
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "select-checkbox",
+                "id": "images",
+                "type": "checkbox",
+                "value": "images",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Images",
+                "className": "",
+                "htmlFor": "images",
+              },
+              "ref": null,
+              "rendered": "Images",
+              "type": "label",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "select-checkbox",
+                "id": "audio",
+                "type": "checkbox",
+                "value": "audio",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "audio",
+                "className": "",
+                "htmlFor": "audio",
+              },
+              "ref": null,
+              "rendered": "audio",
+              "type": "label",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Search",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": "Search",
+          "type": "button",
         },
       ],
+      "type": "div",
+    },
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <div
+          className="filter-header"
+        >
+          <h1>
+            NASA Search
+          </h1>
+          <div
+            className="search-bar"
+          >
+            <input
+              className="input-box"
+              name="search"
+              onChange={[Function]}
+              placeholder="Enter search text"
+              type="text"
+            />
+          </div>
+          <div
+            className="select-group"
+          >
+            <input
+              className="select-checkbox"
+              id="images"
+              type="checkbox"
+              value="images"
+            />
+            <label
+              className=""
+              htmlFor="images"
+            >
+              Images
+            </label>
+            <input
+              className="select-checkbox"
+              id="audio"
+              type="checkbox"
+              value="audio"
+            />
+            <label
+              className=""
+              htmlFor="audio"
+            >
+              audio
+            </label>
+          </div>
+          <button
+            onClick={[Function]}
+          >
+            Search
+          </button>
+        </div>,
+        "className": "filter-bar",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <h1>
+              NASA Search
+            </h1>,
+            <div
+              className="search-bar"
+            >
+              <input
+                className="input-box"
+                name="search"
+                onChange={[Function]}
+                placeholder="Enter search text"
+                type="text"
+              />
+            </div>,
+            <div
+              className="select-group"
+            >
+              <input
+                className="select-checkbox"
+                id="images"
+                type="checkbox"
+                value="images"
+              />
+              <label
+                className=""
+                htmlFor="images"
+              >
+                Images
+              </label>
+              <input
+                className="select-checkbox"
+                id="audio"
+                type="checkbox"
+                value="audio"
+              />
+              <label
+                className=""
+                htmlFor="audio"
+              >
+                audio
+              </label>
+            </div>,
+            <button
+              onClick={[Function]}
+            >
+              Search
+            </button>,
+          ],
+          "className": "filter-header",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "NASA Search",
+            },
+            "ref": null,
+            "rendered": "NASA Search",
+            "type": "h1",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <input
+                className="input-box"
+                name="search"
+                onChange={[Function]}
+                placeholder="Enter search text"
+                type="text"
+              />,
+              "className": "search-bar",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "input-box",
+                "name": "search",
+                "onChange": [Function],
+                "placeholder": "Enter search text",
+                "type": "text",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <input
+                  className="select-checkbox"
+                  id="images"
+                  type="checkbox"
+                  value="images"
+                />,
+                <label
+                  className=""
+                  htmlFor="images"
+                >
+                  Images
+                </label>,
+                <input
+                  className="select-checkbox"
+                  id="audio"
+                  type="checkbox"
+                  value="audio"
+                />,
+                <label
+                  className=""
+                  htmlFor="audio"
+                >
+                  audio
+                </label>,
+              ],
+              "className": "select-group",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "className": "select-checkbox",
+                  "id": "images",
+                  "type": "checkbox",
+                  "value": "images",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "input",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Images",
+                  "className": "",
+                  "htmlFor": "images",
+                },
+                "ref": null,
+                "rendered": "Images",
+                "type": "label",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "className": "select-checkbox",
+                  "id": "audio",
+                  "type": "checkbox",
+                  "value": "audio",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "input",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "audio",
+                  "className": "",
+                  "htmlFor": "audio",
+                },
+                "ref": null,
+                "rendered": "audio",
+                "type": "label",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Search",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "Search",
+            "type": "button",
+          },
+        ],
+        "type": "div",
+      },
       "type": "div",
     },
   ],
