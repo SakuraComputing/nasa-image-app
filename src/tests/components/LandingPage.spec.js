@@ -18,4 +18,13 @@ describe('LandingPage', () => {
             searchString: ''
         })
     });
+    describe('when typing into the input box', () => {
+        const searchString = 'challenger';
+        it('should accept input', () => {
+            landingPage.find('.search-input').simulate('change',
+                { target: { value: searchString }}
+            )
+            expect(landingPage.state().searchText).toEqual(searchString);
+        });
+    });
 });

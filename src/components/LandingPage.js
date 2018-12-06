@@ -13,7 +13,11 @@ class LandingPage extends Component {
     render() {
         return (
             <div>
-                <h1>NASA Media Viewer</h1>                
+                <h1>NASA Media Viewer</h1>      
+                <label htmlFor="search">Enter Search criteria</label>
+                <input className="search-input" onChange={this.onChange} type="text" name="search"/>
+
+          
             </div>
         )
     }
