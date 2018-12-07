@@ -36,6 +36,13 @@ ShallowWrapper {
             placeholder="Enter search text"
             type="text"
           />
+          <button
+            className="search-button"
+            id="test"
+            onClick={[Function]}
+          >
+            🔍
+          </button>
         </div>
         <div
           className="select-group"
@@ -65,11 +72,6 @@ ShallowWrapper {
             audio
           </label>
         </div>
-        <button
-          onClick={[Function]}
-        >
-          Search
-        </button>
         <div
           className="image-container"
         />
@@ -96,6 +98,13 @@ ShallowWrapper {
               placeholder="Enter search text"
               type="text"
             />
+            <button
+              className="search-button"
+              id="test"
+              onClick={[Function]}
+            >
+              🔍
+            </button>
           </div>,
           <div
             className="select-group"
@@ -125,11 +134,6 @@ ShallowWrapper {
               audio
             </label>
           </div>,
-          <button
-            onClick={[Function]}
-          >
-            Search
-          </button>,
           <div
             className="image-container"
           />,
@@ -154,31 +158,56 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": <input
-              className="input-box"
-              name="search"
-              onChange={[Function]}
-              placeholder="Enter search text"
-              type="text"
-            />,
+            "children": Array [
+              <input
+                className="input-box"
+                name="search"
+                onChange={[Function]}
+                placeholder="Enter search text"
+                type="text"
+              />,
+              <button
+                className="search-button"
+                id="test"
+                onClick={[Function]}
+              >
+                🔍
+              </button>,
+            ],
             "className": "search-bar",
           },
           "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "className": "input-box",
-              "name": "search",
-              "onChange": [Function],
-              "placeholder": "Enter search text",
-              "type": "text",
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "input-box",
+                "name": "search",
+                "onChange": [Function],
+                "placeholder": "Enter search text",
+                "type": "text",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
             },
-            "ref": null,
-            "rendered": null,
-            "type": "input",
-          },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "🔍",
+                "className": "search-button",
+                "id": "test",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "🔍",
+              "type": "button",
+            },
+          ],
           "type": "div",
         },
         Object {
@@ -278,18 +307,6 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "Search",
-            "onClick": [Function],
-          },
-          "ref": null,
-          "rendered": "Search",
-          "type": "button",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
             "children": undefined,
             "className": "image-container",
           },
@@ -324,6 +341,13 @@ ShallowWrapper {
               placeholder="Enter search text"
               type="text"
             />
+            <button
+              className="search-button"
+              id="test"
+              onClick={[Function]}
+            >
+              🔍
+            </button>
           </div>
           <div
             className="select-group"
@@ -353,11 +377,6 @@ ShallowWrapper {
               audio
             </label>
           </div>
-          <button
-            onClick={[Function]}
-          >
-            Search
-          </button>
           <div
             className="image-container"
           />
@@ -384,6 +403,13 @@ ShallowWrapper {
                 placeholder="Enter search text"
                 type="text"
               />
+              <button
+                className="search-button"
+                id="test"
+                onClick={[Function]}
+              >
+                🔍
+              </button>
             </div>,
             <div
               className="select-group"
@@ -413,11 +439,6 @@ ShallowWrapper {
                 audio
               </label>
             </div>,
-            <button
-              onClick={[Function]}
-            >
-              Search
-            </button>,
             <div
               className="image-container"
             />,
@@ -442,31 +463,56 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": <input
-                className="input-box"
-                name="search"
-                onChange={[Function]}
-                placeholder="Enter search text"
-                type="text"
-              />,
+              "children": Array [
+                <input
+                  className="input-box"
+                  name="search"
+                  onChange={[Function]}
+                  placeholder="Enter search text"
+                  type="text"
+                />,
+                <button
+                  className="search-button"
+                  id="test"
+                  onClick={[Function]}
+                >
+                  🔍
+                </button>,
+              ],
               "className": "search-bar",
             },
             "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "className": "input-box",
-                "name": "search",
-                "onChange": [Function],
-                "placeholder": "Enter search text",
-                "type": "text",
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "className": "input-box",
+                  "name": "search",
+                  "onChange": [Function],
+                  "placeholder": "Enter search text",
+                  "type": "text",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "input",
               },
-              "ref": null,
-              "rendered": null,
-              "type": "input",
-            },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "🔍",
+                  "className": "search-button",
+                  "id": "test",
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "rendered": "🔍",
+                "type": "button",
+              },
+            ],
             "type": "div",
           },
           Object {
@@ -560,18 +606,6 @@ ShallowWrapper {
               },
             ],
             "type": "div",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "Search",
-              "onClick": [Function],
-            },
-            "ref": null,
-            "rendered": "Search",
-            "type": "button",
           },
           Object {
             "instance": null,

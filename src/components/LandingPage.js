@@ -50,6 +50,14 @@ export class LandingPage extends Component {
                             placeholder="Enter search text"
                             className="input-box"
                         />
+                        <button 
+                            onClick={this.onSearch}
+                            className="search-button"
+                            id="test"
+                        >
+                        &#128269;
+                        
+                        </button>
                     </div> 
                     <div className="select-group">
                         <input 
@@ -67,7 +75,6 @@ export class LandingPage extends Component {
                         />
                         <label htmlFor="audio" className="">audio</label>
                     </div>
-                    <button onClick={this.onSearch}>Search</button>
                     <div className="image-container">
                         {mediaResults}
                     </div>
