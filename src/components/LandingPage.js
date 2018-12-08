@@ -9,7 +9,9 @@ export class LandingPage extends Component {
         super(props);
         this.state = {
             media: [],
-            searchString: ''
+            searchString: '',
+            imageChecked: false,
+            audioChecked: false
         }
     }
 
@@ -24,6 +26,18 @@ export class LandingPage extends Component {
         if(search) {
             this.props.getMedia(search);
         }
+    }
+
+    toggleImage = () => {
+        this.setState({
+            imageChecked: !this.state.checked
+        })
+    } 
+
+    toggleAudio = () => {
+        this.setState({
+            audioChecked: !this.state.audioChecked
+        })
     }
     
     render() {
@@ -55,8 +69,8 @@ export class LandingPage extends Component {
                             className="search-button"
                             id="test"
                         >
-                        &#128269;
                         
+                        <ion-icon icon="search" size="large" color="black"/>
                         </button>
                     </div> 
                     <div className="select-group">
@@ -65,6 +79,7 @@ export class LandingPage extends Component {
                             id="images" 
                             value="images" 
                             className="select-checkbox" 
+                            onChange={this.toggleImage}
                         />
                         <label htmlFor="images" className="">Images</label>
                         <input 
@@ -72,8 +87,9 @@ export class LandingPage extends Component {
                             id="audio" 
                             value="audio" 
                             className="select-checkbox" 
+                            onChange={this.toggleAudio}
                         />
-                        <label htmlFor="audio" className="">audio</label>
+                        <label htmlFor="audio" className="">Audio</label>
                     </div>
                     <div className="image-container">
                         {mediaResults}
