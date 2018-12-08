@@ -18,7 +18,9 @@ describe('LandingPage', () => {
     it('should set the initial `state`', () => {
         expect(landingPage.state()).toEqual({
             media: [],
-            searchString: ''
+            searchString: '',
+            imageChecked: false,
+            audioChecked: false
         })
     });
     describe('when typing into the input box', () => {
@@ -28,6 +30,22 @@ describe('LandingPage', () => {
                 { target: { value: searchString }}
             )
             expect(landingPage.state().searchString).toEqual(searchString);
+        });
+    });
+    describe('when selcecting the checkboxes', () => {
+        const imageChecked = false;
+        it('should set the state when the image checkbox is selected', () => {
+            landingPage.find('#images').simulate('change', {
+                target: { value: imageChecked } 
+            })
+            expect(landingPage.state().imageChecked).toBe(true);
+        });
+        const audioChecked = false;
+        it('should set the state when the audio checkbox is selected', () => {
+            landingPage.find('#audio').simulate('change', {
+                target: { value: audioChecked } 
+            })
+            expect(landingPage.state().audioChecked).toBe(true);
         });
     });
 });
