@@ -8,6 +8,11 @@ ShallowWrapper {
     image="https://images.assets.nasa.gov/apollo11"
     item={
       Object {
+        "data": Array [
+          Object {
+            "nasa_id": [MockFunction],
+          },
+        ],
         "links": Array [
           Object {
             "href": [MockFunction],
@@ -39,6 +44,15 @@ ShallowWrapper {
           className="image-item"
           src={[MockFunction]}
         />,
+        <Link
+          replace={false}
+          to="/asset/function () {
+        return fn.apply(this, arguments);
+      }"
+        >
+          Click on here 
+          [MockFunction]
+        </Link>,
       ],
       "className": "media-box image-frame",
     },
@@ -68,6 +82,27 @@ ShallowWrapper {
         "rendered": null,
         "type": "img",
       },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": Array [
+            "Click on here ",
+            [MockFunction],
+          ],
+          "replace": false,
+          "to": "/asset/function () {
+        return fn.apply(this, arguments);
+      }",
+        },
+        "ref": null,
+        "rendered": Array [
+          "Click on here ",
+          [MockFunction],
+        ],
+        "type": [Function],
+      },
     ],
     "type": "div",
   },
@@ -86,6 +121,15 @@ ShallowWrapper {
             className="image-item"
             src={[MockFunction]}
           />,
+          <Link
+            replace={false}
+            to="/asset/function () {
+        return fn.apply(this, arguments);
+      }"
+          >
+            Click on here 
+            [MockFunction]
+          </Link>,
         ],
         "className": "media-box image-frame",
       },
@@ -114,6 +158,27 @@ ShallowWrapper {
           "ref": null,
           "rendered": null,
           "type": "img",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": Array [
+              "Click on here ",
+              [MockFunction],
+            ],
+            "replace": false,
+            "to": "/asset/function () {
+        return fn.apply(this, arguments);
+      }",
+          },
+          "ref": null,
+          "rendered": Array [
+            "Click on here ",
+            [MockFunction],
+          ],
+          "type": [Function],
         },
       ],
       "type": "div",
