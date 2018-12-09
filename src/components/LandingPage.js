@@ -11,7 +11,8 @@ export class LandingPage extends Component {
             media: [],
             searchString: '',
             imageChecked: false,
-            audioChecked: false
+            audioChecked: false,
+            videoChecked: false
         }
     }
 
@@ -23,15 +24,19 @@ export class LandingPage extends Component {
 
     onSearch = (e) => {
 
-        const { searchString, imageChecked, audioChecked } = this.state;
+        const { searchString, imageChecked, audioChecked, videoChecked } = this.state;
         
         if(searchString) {
-            if((imageChecked && audioChecked) || (!imageChecked && !audioChecked)) {
+            if((imageChecked && audioChecked && videoChecked) || (!imageChecked && !audioChecked && !videoChecked)) {
+                console.log('All checked');
                 this.props.getMedia(searchString, null);
             } else if(imageChecked) {
                 this.props.getMedia(searchString, 'image');
             } else if(audioChecked) {
                 this.props.getMedia(searchString, 'audio');
+            } else if(videoChecked) {
+                console.log('Video checked')
+                this.props.getMedia(searchString, 'video');
             }
         }
     }
@@ -48,6 +53,12 @@ export class LandingPage extends Component {
         })
     }
     
+    toggleVideo = () => {
+        this.setState({
+            videoChecked: !this.state.videoChecked
+        })
+    }
+    
     render() {
 
         let mediaResults;
@@ -58,6 +69,8 @@ export class LandingPage extends Component {
             (   
                 <MediaList key={index} title={item.data[0].title} item={item} />
             ))
+            console.log(this.state);
+            console.log(this.props);
         } 
 
         return (
@@ -98,6 +111,14 @@ export class LandingPage extends Component {
                             onChange={this.toggleAudio}
                         />
                         <label htmlFor="audio" className="">Audio</label>
+                        <input 
+                            type="checkbox" 
+                            id="video" 
+                            value="video" 
+                            className="select-checkbox" 
+                            onChange={this.toggleVideo}
+                        />
+                        <label htmlFor="video" className="">Video</label>
                     </div>
                     <div className="image-container">
                         {mediaResults}

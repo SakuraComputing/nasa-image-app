@@ -20,7 +20,8 @@ describe('LandingPage', () => {
             media: [],
             searchString: '',
             imageChecked: false,
-            audioChecked: false
+            audioChecked: false,
+            videoChecked: false
         })
     });
     describe('when typing into the input box', () => {

@@ -77,6 +77,19 @@ ShallowWrapper {
           >
             Audio
           </label>
+          <input
+            className="select-checkbox"
+            id="video"
+            onChange={[Function]}
+            type="checkbox"
+            value="video"
+          />
+          <label
+            className=""
+            htmlFor="video"
+          >
+            Video
+          </label>
         </div>
         <div
           className="image-container"
@@ -144,6 +157,19 @@ ShallowWrapper {
               htmlFor="audio"
             >
               Audio
+            </label>
+            <input
+              className="select-checkbox"
+              id="video"
+              onChange={[Function]}
+              type="checkbox"
+              value="video"
+            />
+            <label
+              className=""
+              htmlFor="video"
+            >
+              Video
             </label>
           </div>,
           <div
@@ -274,6 +300,19 @@ ShallowWrapper {
               >
                 Audio
               </label>,
+              <input
+                className="select-checkbox"
+                id="video"
+                onChange={[Function]}
+                type="checkbox"
+                value="video"
+              />,
+              <label
+                className=""
+                htmlFor="video"
+              >
+                Video
+              </label>,
             ],
             "className": "select-group",
           },
@@ -333,6 +372,34 @@ ShallowWrapper {
               },
               "ref": null,
               "rendered": "Audio",
+              "type": "label",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "select-checkbox",
+                "id": "video",
+                "onChange": [Function],
+                "type": "checkbox",
+                "value": "video",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Video",
+                "className": "",
+                "htmlFor": "video",
+              },
+              "ref": null,
+              "rendered": "Video",
               "type": "label",
             },
           ],
@@ -418,6 +485,19 @@ ShallowWrapper {
             >
               Audio
             </label>
+            <input
+              className="select-checkbox"
+              id="video"
+              onChange={[Function]}
+              type="checkbox"
+              value="video"
+            />
+            <label
+              className=""
+              htmlFor="video"
+            >
+              Video
+            </label>
           </div>
           <div
             className="image-container"
@@ -485,6 +565,19 @@ ShallowWrapper {
                 htmlFor="audio"
               >
                 Audio
+              </label>
+              <input
+                className="select-checkbox"
+                id="video"
+                onChange={[Function]}
+                type="checkbox"
+                value="video"
+              />
+              <label
+                className=""
+                htmlFor="video"
+              >
+                Video
               </label>
             </div>,
             <div
@@ -615,6 +708,19 @@ ShallowWrapper {
                 >
                   Audio
                 </label>,
+                <input
+                  className="select-checkbox"
+                  id="video"
+                  onChange={[Function]}
+                  type="checkbox"
+                  value="video"
+                />,
+                <label
+                  className=""
+                  htmlFor="video"
+                >
+                  Video
+                </label>,
               ],
               "className": "select-group",
             },
@@ -674,6 +780,34 @@ ShallowWrapper {
                 },
                 "ref": null,
                 "rendered": "Audio",
+                "type": "label",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "className": "select-checkbox",
+                  "id": "video",
+                  "onChange": [Function],
+                  "type": "checkbox",
+                  "value": "video",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "input",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Video",
+                  "className": "",
+                  "htmlFor": "video",
+                },
+                "ref": null,
+                "rendered": "Video",
                 "type": "label",
               },
             ],
