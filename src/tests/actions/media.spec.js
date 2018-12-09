@@ -1,12 +1,11 @@
-import { setMedia, getMedia } from '../../actions/media';
+import { setMedia, getMedia, getAsset } from '../../actions/media';
 import media from '../fixtures/media';
-import { SET_MEDIA, GET_MEDIA } from '../../actions/types';
+import { SET_MEDIA, GET_MEDIA, GET_ASSET } from '../../actions/types';
 import Axios from 'axios';
 import MockAdapter from 'axios-mock-adapter';
 import configureMockStore from 'redux-mock-store';
 
-
-describe('meida action object', () => {
+describe('media action object', () => {
 
     let mockAxios;
     let store;
@@ -57,6 +56,18 @@ describe('meida action object', () => {
         ])            
     });
 
+    it('should get the asset via nasa_id', async () => {
+        const asset_id = 'S69-454377';
+        mockAxios.onGet(`https:images-api.nasa.gov/asset/${asset_id}`).reply(200, {
+            asset: 'test'
+        });
+        getAsset(asset_id)(store.dispatch);
+        await flushAllPromises();
+
+        expect(store.getActions()).toEqual([
+            { payload: { asset: 'test'}, type: GET_ASSET }
+        ])
+    });
 
     it('should setup the media action object', () => {
         const action = setMedia(media);
