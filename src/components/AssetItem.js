@@ -1,6 +1,8 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { getAsset } from '../actions/media';
 
-class AssetItem extends Component {
+export class AssetItem extends Component {
   render() {
     return (
       <div>
@@ -9,4 +11,7 @@ class AssetItem extends Component {
     )
   }
 }
-export default AssetItem;
+const mapStateToProps = state => ({
+    media: state.media
+})
+export default connect(mapStateToProps, { getAsset } )(AssetItem);
