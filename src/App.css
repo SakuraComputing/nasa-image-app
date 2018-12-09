@@ -11,9 +11,11 @@ body {
   color: #4c4c4c;
 }
 
-.container {
-  margin: 0 5%;
+h1 {
+  text-align: center;
 }
+
+/* Landing Page Styling */
 
 .filter-bar {
   border: solid 2px #f90;
@@ -21,11 +23,6 @@ body {
   padding: 5px;
   border-radius: 10px;
 }
-
-h1 {
-  text-align: center;
-}
-
 
 .input-box:focus {
   outline: none;
@@ -35,38 +32,10 @@ h1 {
   display: inline;
 }
 
-
-.media-box {
-  color: #fff;
-  border: solid 2px #f90;
-  margin-bottom: 20px;
-  background-color: #f90;
-  border-radius: 10px;
-  padding-bottom: 20px;
-  padding-left:20px;
-  font-size: 90%;
-  transition: 0.2s;
-}
-
-.media-box:hover {
-  background-color: black;
-}
-
 .image-container {
   margin-top: 20px;
   display: grid;
   grid-template-columns: auto auto auto auto;
-}
-
-.image-frame {
-  padding: 5px;
-  margin: 8px;
-  text-align: center;
-  border: solid 1px #4c4c4c;
-}
-
-.image-item {
-  max-width: 90%;
 }
 
 /* CSS Purely for the search bar */
@@ -103,11 +72,36 @@ h1 {
   background-color: darkorange;
 }
 
-/* Check Box CSS */
+/* Media List Styling */
+.media-box {
+  color: #fff;
+  border: solid 2px #f90;
+  margin-bottom: 20px;
+  background-color: #f90;
+  border-radius: 10px;
+  padding-bottom: 20px;
+  padding-left:20px;
+  font-size: 90%;
+  transition: 0.2s;
+}
 
+.media-box:hover {
+  background-color: black;
+}
+
+.image-frame {
+  padding: 5px;
+  margin: 8px;
+  text-align: center;
+  border: solid 1px #4c4c4c;
+}
+
+.image-item {
+  max-width: 90%;
+}
+
+/* Check Box CSS */
 .select-group {
-  /* display: inline-block; */
-  /* margin-left: 40px; */
   margin-top: 20px;
   font-size: 115%;
   text-align: center;
@@ -122,4 +116,24 @@ h1 {
 .select-checkbox:checked {
   background-color: #f90
 }
+
+/* Asset Styling */
+.asset-container {
+  margin: 0 2%;
+  text-align: center;
+  border: 1px solid #f90;
+  border-radius: 5px;
+  background-color:#ecf2f9;
+}
+
+.asset-image {
+  width: 70%;
+  align-content: center;
+}
+
+.asset-description {
+  margin: 2% 3%;
+}
+
+
 

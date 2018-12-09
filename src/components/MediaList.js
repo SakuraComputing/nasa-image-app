@@ -9,7 +9,10 @@ const MediaList = ({ title, item }) => {
         ? <img className="image-item" src={item.links[0].href} alt="noimage"/>
         : <p>{item.data[0].description}</p>}
         <br></br>
-        <Link to={`/asset/${item.data[0].nasa_id}`}>Read more</Link>
+        <Link to={{ pathname: `/asset/${item.data[0].nasa_id}`,
+        state: {
+          description: item.data[0].description
+        }}}>Read more</Link>
     </div>
   )
 }

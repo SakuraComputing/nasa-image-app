@@ -47,9 +47,16 @@ ShallowWrapper {
         <br />,
         <Link
           replace={false}
-          to="/asset/function () {
+          to={
+            Object {
+              "pathname": "/asset/function () {
         return fn.apply(this, arguments);
-      }"
+      }",
+              "state": Object {
+                "description": undefined,
+              },
+            }
+          }
         >
           Read more
         </Link>,
@@ -98,9 +105,14 @@ ShallowWrapper {
         "props": Object {
           "children": "Read more",
           "replace": false,
-          "to": "/asset/function () {
+          "to": Object {
+            "pathname": "/asset/function () {
         return fn.apply(this, arguments);
       }",
+            "state": Object {
+              "description": undefined,
+            },
+          },
         },
         "ref": null,
         "rendered": "Read more",
@@ -127,9 +139,16 @@ ShallowWrapper {
           <br />,
           <Link
             replace={false}
-            to="/asset/function () {
+            to={
+              Object {
+                "pathname": "/asset/function () {
         return fn.apply(this, arguments);
-      }"
+      }",
+                "state": Object {
+                  "description": undefined,
+                },
+              }
+            }
           >
             Read more
           </Link>,
@@ -178,9 +197,14 @@ ShallowWrapper {
           "props": Object {
             "children": "Read more",
             "replace": false,
-            "to": "/asset/function () {
+            "to": Object {
+              "pathname": "/asset/function () {
         return fn.apply(this, arguments);
       }",
+              "state": Object {
+                "description": undefined,
+              },
+            },
           },
           "ref": null,
           "rendered": "Read more",

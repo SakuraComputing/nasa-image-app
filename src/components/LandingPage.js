@@ -56,7 +56,6 @@ export class LandingPage extends Component {
             const { items } = this.props.media.media.collection;
             mediaResults = items.map((item, index) => 
             (   
-                // <MediaList key={index} title={item.data[0].title} image={item.links[0].href} />
                 <MediaList key={index} title={item.data[0].title} item={item} />
             ))
         } 

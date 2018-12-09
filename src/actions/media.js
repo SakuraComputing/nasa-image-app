@@ -25,9 +25,9 @@ export const getMedia = (searchString, media_type) => dispatch => {
     .catch(err => console.log(err));
 }
 
-export const getAsset = ( asset_id ) => dispatch => {
+export const getAsset = (nasa_id) => dispatch => {
 
-    let searchAssetUri = `https://images-api.nasa.gov/asset/${asset_id}`;
+    let searchAssetUri = `https://images-api.nasa.gov/asset/${nasa_id}`;
     axios.get(searchAssetUri)
     .then(res => 
         dispatch({
