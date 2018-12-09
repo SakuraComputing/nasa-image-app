@@ -5,7 +5,8 @@ import media from '../fixtures/media';
 
 describe('MediaList component', () => {
     it('should render correctly', () => {
-        const mediaList = shallow(<MediaList {...media[0]}/>)
+        const item = { links: [ { href: jest.fn() } ] };
+        const mediaList = shallow(<MediaList item={item} {...media[0]}/>)
         expect(mediaList).toMatchSnapshot();
     });
 });

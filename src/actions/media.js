@@ -6,8 +6,16 @@ export const setMedia = (media) => ({
     media
 });
 
-export const getMedia = (searchString) => dispatch => {
-    axios.get(`https://images-api.nasa.gov/search?q=${searchString}&media_type=image`)
+export const getMedia = (searchString, media_type) => dispatch => {
+
+    let searchUri;
+
+    if(media_type) {
+        searchUri = `https://images-api.nasa.gov/search?q=${searchString}&media_type=${media_type}`;
+    } else {
+        searchUri = `https://images-api.nasa.gov/search?q=${searchString}`;
+    }
+    axios.get(searchUri)
     .then(res => 
         dispatch({
             type: GET_MEDIA,

@@ -23,15 +23,32 @@ describe('meida action object', () => {
         mockAxios.reset();
     });
 
-    it('should get media from the api', async () => {
+    it('should get all media from the api', async () => {
         // Given 
         const searchString = 'Apollo';
-        mockAxios.onGet(`https://images-api.nasa.gov/search?q=${searchString}&media_type=image`).reply(200, {
+        mockAxios.onGet(`https://images-api.nasa.gov/search?q=${searchString}`).reply(200, {
             test: 'API Media'
         });
     
         // When
         getMedia(searchString)(store.dispatch);
+        await flushAllPromises();
+    
+        // Then
+        expect(store.getActions()).toEqual([
+            { payload: { test: 'API Media'} , type: GET_MEDIA } 
+        ])            
+    });
+    it('should get specified media from the api', async () => {
+        // Given 
+        const searchString = 'moon';
+        const media_type = 'image'
+        mockAxios.onGet(`https://images-api.nasa.gov/search?q=${searchString}&media_type=${media_type}`).reply(200, {
+            test: 'API Media'
+        });
+    
+        // When
+        getMedia(searchString, media_type)(store.dispatch);
         await flushAllPromises();
     
         // Then

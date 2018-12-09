@@ -1,10 +1,12 @@
 import React from 'react'
 
-const MediaList = ({ title, image }) => {
+const MediaList = ({ title, item }) => {
   return (
     <div className="media-box image-frame">
-      <h3>Title: {title}</h3>
-      <img className="image-item" src={image} alt="display"/>
+      <h3>{title}</h3>
+      {item.links 
+        ? <img className="image-item" src={item.links[0].href} alt="noimage"/>
+        : <p>{item.data[0].description}</p>}
     </div>
   )
 }

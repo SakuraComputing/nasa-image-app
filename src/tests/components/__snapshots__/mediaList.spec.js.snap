@@ -6,6 +6,15 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <MediaList
     description="Voyage to the moon"
     image="https://images.assets.nasa.gov/apollo11"
+    item={
+      Object {
+        "links": Array [
+          Object {
+            "href": [MockFunction],
+          },
+        ],
+      }
+    }
     title="Apollo 11"
   />,
   Symbol(enzyme.__renderer__): Object {
@@ -23,13 +32,12 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <h3>
-          Title: 
           Apollo 11
         </h3>,
         <img
-          alt="display"
+          alt="noimage"
           className="image-item"
-          src="https://images.assets.nasa.gov/apollo11"
+          src={[MockFunction]}
         />,
       ],
       "className": "media-box image-frame",
@@ -41,16 +49,10 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": Array [
-            "Title: ",
-            "Apollo 11",
-          ],
+          "children": "Apollo 11",
         },
         "ref": null,
-        "rendered": Array [
-          "Title: ",
-          "Apollo 11",
-        ],
+        "rendered": "Apollo 11",
         "type": "h3",
       },
       Object {
@@ -58,9 +60,9 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "alt": "display",
+          "alt": "noimage",
           "className": "image-item",
-          "src": "https://images.assets.nasa.gov/apollo11",
+          "src": [MockFunction],
         },
         "ref": null,
         "rendered": null,
@@ -77,13 +79,12 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <h3>
-            Title: 
             Apollo 11
           </h3>,
           <img
-            alt="display"
+            alt="noimage"
             className="image-item"
-            src="https://images.assets.nasa.gov/apollo11"
+            src={[MockFunction]}
           />,
         ],
         "className": "media-box image-frame",
@@ -95,16 +96,10 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": Array [
-              "Title: ",
-              "Apollo 11",
-            ],
+            "children": "Apollo 11",
           },
           "ref": null,
-          "rendered": Array [
-            "Title: ",
-            "Apollo 11",
-          ],
+          "rendered": "Apollo 11",
           "type": "h3",
         },
         Object {
@@ -112,9 +107,9 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "alt": "display",
+            "alt": "noimage",
             "className": "image-item",
-            "src": "https://images.assets.nasa.gov/apollo11",
+            "src": [MockFunction],
           },
           "ref": null,
           "rendered": null,

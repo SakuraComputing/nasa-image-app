@@ -22,9 +22,17 @@ export class LandingPage extends Component {
     }
 
     onSearch = (e) => {
-        const search = this.state.searchString
-        if(search) {
-            this.props.getMedia(search);
+
+        const { searchString, imageChecked, audioChecked } = this.state;
+        
+        if(searchString) {
+            if((imageChecked && audioChecked) || (!imageChecked && !audioChecked)) {
+                this.props.getMedia(searchString, null);
+            } else if(imageChecked) {
+                this.props.getMedia(searchString, 'image');
+            } else if(audioChecked) {
+                this.props.getMedia(searchString, 'audio');
+            }
         }
     }
 
@@ -47,10 +55,11 @@ export class LandingPage extends Component {
         if(this.props.media.media) {
             const { items } = this.props.media.media.collection;
             mediaResults = items.map((item, index) => 
-            (
-                <MediaList key={index} title={item.data[0].title} image={item.links[0].href} />
+            (   
+                // <MediaList key={index} title={item.data[0].title} image={item.links[0].href} />
+                <MediaList key={index} title={item.data[0].title} item={item} />
             ))
-        }
+        } 
 
         return (
             <div className="filter-bar">
