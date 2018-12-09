@@ -44,14 +44,14 @@ ShallowWrapper {
           className="image-item"
           src={[MockFunction]}
         />,
+        <br />,
         <Link
           replace={false}
           to="/asset/function () {
         return fn.apply(this, arguments);
       }"
         >
-          Click on here 
-          [MockFunction]
+          Read more
         </Link>,
       ],
       "className": "media-box image-frame",
@@ -85,22 +85,25 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
+        "nodeType": "host",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": "br",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
         "nodeType": "class",
         "props": Object {
-          "children": Array [
-            "Click on here ",
-            [MockFunction],
-          ],
+          "children": "Read more",
           "replace": false,
           "to": "/asset/function () {
         return fn.apply(this, arguments);
       }",
         },
         "ref": null,
-        "rendered": Array [
-          "Click on here ",
-          [MockFunction],
-        ],
+        "rendered": "Read more",
         "type": [Function],
       },
     ],
@@ -121,14 +124,14 @@ ShallowWrapper {
             className="image-item"
             src={[MockFunction]}
           />,
+          <br />,
           <Link
             replace={false}
             to="/asset/function () {
         return fn.apply(this, arguments);
       }"
           >
-            Click on here 
-            [MockFunction]
+            Read more
           </Link>,
         ],
         "className": "media-box image-frame",
@@ -162,22 +165,25 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
+          "nodeType": "host",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": "br",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "children": Array [
-              "Click on here ",
-              [MockFunction],
-            ],
+            "children": "Read more",
             "replace": false,
             "to": "/asset/function () {
         return fn.apply(this, arguments);
       }",
           },
           "ref": null,
-          "rendered": Array [
-            "Click on here ",
-            [MockFunction],
-          ],
+          "rendered": "Read more",
           "type": [Function],
         },
       ],

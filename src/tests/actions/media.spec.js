@@ -58,7 +58,7 @@ describe('media action object', () => {
 
     it('should get the asset via nasa_id', async () => {
         const asset_id = 'S69-454377';
-        mockAxios.onGet(`https:images-api.nasa.gov/asset/${asset_id}`).reply(200, {
+        mockAxios.onGet(`https://images-api.nasa.gov/asset/${asset_id}`).reply(200, {
             asset: 'test'
         });
         getAsset(asset_id)(store.dispatch);

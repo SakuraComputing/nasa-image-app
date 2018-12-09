@@ -1,4 +1,4 @@
-import { SET_MEDIA, GET_MEDIA } from '../actions/types';
+import { SET_MEDIA, GET_MEDIA, GET_ASSET } from '../actions/types';
 import axios from 'axios';
 
 export const setMedia = (media) => ({
@@ -23,4 +23,18 @@ export const getMedia = (searchString, media_type) => dispatch => {
         })
     )
     .catch(err => console.log(err));
+}
+
+export const getAsset = ( asset_id ) => dispatch => {
+
+    let searchAssetUri = `https://images-api.nasa.gov/asset/${asset_id}`;
+    axios.get(searchAssetUri)
+    .then(res => 
+        dispatch({
+            type: GET_ASSET,
+            payload: res.data
+        })
+    )
+    .catch(err => console.log(err));
+
 }
