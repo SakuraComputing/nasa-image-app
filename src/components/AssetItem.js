@@ -8,8 +8,7 @@ export class AssetItem extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            media: [],
-            asset: []
+            media: []
         }
     }
     

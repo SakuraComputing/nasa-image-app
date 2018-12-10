@@ -28,14 +28,12 @@ export class LandingPage extends Component {
         
         if(searchString) {
             if((imageChecked && audioChecked && videoChecked) || (!imageChecked && !audioChecked && !videoChecked)) {
-                console.log('All checked');
                 this.props.getMedia(searchString, null);
             } else if(imageChecked) {
                 this.props.getMedia(searchString, 'image');
             } else if(audioChecked) {
                 this.props.getMedia(searchString, 'audio');
             } else if(videoChecked) {
-                console.log('Video checked')
                 this.props.getMedia(searchString, 'video');
             }
         }
@@ -69,8 +67,6 @@ export class LandingPage extends Component {
             (   
                 <MediaList key={index} title={item.data[0].title} item={item} />
             ))
-            console.log(this.state);
-            console.log(this.props);
         } 
 
         return (

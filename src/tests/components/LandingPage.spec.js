@@ -48,5 +48,12 @@ describe('LandingPage', () => {
             })
             expect(landingPage.state().audioChecked).toBe(true);
         });
+        it('should set the state when the video checkbox is slected', () => {
+            const videoChecked = false;
+            landingPage.find('#video').simulate('change', {
+                target: { value: videoChecked }
+            })
+            expect(landingPage.state().videoChecked).toBe(true);
+        });
     });
 });
